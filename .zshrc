@@ -9,13 +9,6 @@ export NVM_DIR="$HOME/.nvm"
 alias dev="cd $HOME/Developer"
 alias spell="cat /usr/share/dict/words | grep $1"
 
-#git
-alias gac="git commit -am"
-alias gcm="git commit -m"
-alias gs="git status"
-alias gc="git checkout"
-alias gb="git branch"
-alias gd="git branch -d"
 export PATH="/usr/local/opt/gnuplot@4/bin:$PATH"
 
 #npm
@@ -35,4 +28,20 @@ function diary {
   echo $TIME >> $ENTRY && vim "+ normal G $" $ENTRY
 }
 
+function entries {
+  YEAR=`date +%Y`
+  NUM_AND_MONTH=`date +"%m-%b"`
+
+  cat $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
+}
+
 alias gt="./gradlew test"
+
+alias android="/Applications/Android\ Studio.app/Contents/MacOS/studio"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jamesduf/.sdkman"
+[[ -s "/Users/jamesduf/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jamesduf/.sdkman/bin/sdkman-init.sh"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

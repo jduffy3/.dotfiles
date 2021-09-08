@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+	name = James Duffy
+	email = james@defmethod.io
+[diff]
+	tool = vimdiff
+[alias]
+  gac = commit -am
+  gcm = commit -m
+  gs = status
+  gc = checkout
+  gb = branch
+  gd = branch -d
+
