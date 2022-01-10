@@ -47,3 +47,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+export DOCKER_HOST_IP=`ipconfig getifaddr en0`
+
+#protoc
+export PATH="$PATH:$HOME/.local/bin"
+export GOPATH=$(go env GOPATH)
+export PATH="$PATH:$(go env GOPATH)/bin"
