@@ -27,3 +27,13 @@ function entries {
 }
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+#git
+alias gs='git status'
+alias gac='git commit -am'
+alias gcm='git commit -m'
+alias gs='git status'
+alias gc='git checkout'
+alias gb='git branch'
+alias gd='git branch -d'
+
