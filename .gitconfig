@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = James Duffy
-	email = james@defmethod.io
+	email = jduffy3@gmail.com
 [diff]
 	tool = vimdiff
 [alias]
