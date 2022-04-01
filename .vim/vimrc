@@ -3,15 +3,10 @@ packloadall
 syntax on
 set termguicolors     " enable true colors support
 set noswapfile
-set number
-set relativenumber
+set number relativenumber
 set scrolloff=8
-set expandtab
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set shiftround
-set hlsearch
-set incsearch
+set expandtab tabstop=2 softtabstop=2 shiftwidth=2 shiftround
+set hlsearch incsearch
 set showcmd
 "set guicursor
 
@@ -40,7 +35,6 @@ let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 1
 let g:ale_fix_on_save = 1
 
-"let ayucolor="dark"   " for dark version of theme
 let g:airline_theme = 'papercolor'
 
 let mapleader = " "
