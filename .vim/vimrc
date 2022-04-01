@@ -44,8 +44,8 @@ let g:ale_fix_on_save = 1
 let g:airline_theme = 'papercolor'
 
 let mapleader = " "
-nnoremap <leader>pv :Vex<CR>    " project view
-nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <leader>pv :Vex<CR> " project view
+nnoremap <leader><CR> :so ~/.vim/vimrc<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader><leader> <C-^> " alternate file
