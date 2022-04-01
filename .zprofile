@@ -42,3 +42,7 @@ alias dev="cd $HOME/Developer"
 alias spell="cat /usr/share/dict/words | grep $1"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+function cheat {
+  curl https://cht.sh/$1
+}
