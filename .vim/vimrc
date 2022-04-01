@@ -43,3 +43,5 @@ nnoremap <leader><CR> :so ~/.vim/vimrc<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader><leader> <C-^> " alternate file
+
+xnoremap . :normal .<CR> "visual dot command
