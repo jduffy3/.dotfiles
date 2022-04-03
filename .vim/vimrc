@@ -10,6 +10,8 @@ set hlsearch incsearch
 set showcmd
 set equalalways
 set bg=dark
+set noeb vb t_vb=
+"au GUIEnter * set vb t_vb=
 
 hi QuickFixLine term=reverse ctermbg=52 guibg=Cyan
 

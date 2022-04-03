@@ -43,6 +43,5 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gd='git branch -d'
 
-#alias dev="cd $HOME/Developer"
-alias dev="ls  $HOME/Developer | fzf"
 alias dotfiles="cd $DOTFILES"
+
