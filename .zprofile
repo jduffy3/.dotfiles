@@ -45,3 +45,4 @@ alias gd='git branch -d'
 
 alias dotfiles="cd $DOTFILES"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
