@@ -12,6 +12,8 @@ fi
 # ------------
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+export FZF_DEFAULT_OPTS='--layout=reverse'
 
-alias sd="find $HOME -type d -not -path '*/.*' -print 2>/dev/null | fzf"
+function sd {
+  cd $(find $HOME -type d -not -path '*/.*' -print 2>/dev/null | fzf)
+}
