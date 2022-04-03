@@ -8,34 +8,28 @@ set scrolloff=8
 set expandtab tabstop=2 softtabstop=2 shiftwidth=2 shiftround
 set hlsearch incsearch
 set showcmd
-"set guicursor
+set equalalways
+set bg=dark
 
 hi QuickFixLine term=reverse ctermbg=52 guibg=Cyan
-colorscheme peachpuff
 
 call plug#begin('~/.vim/plugged')
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-Plug 'tpope/vim-fugitive',
-Plug 'tpope/vim-surround',
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'dense-analysis/ale'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+  Plug 'morhetz/gruvbox',
+  Plug 'tpope/vim-fugitive',
+  Plug 'tpope/vim-surround',
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'dense-analysis/ale'
 call plug#end()
+
+colorscheme gruvbox
 
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-
 let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 1
 let g:ale_fix_on_save = 1
-
-let g:airline_theme = 'papercolor'
 
 let mapleader = " "
 nnoremap <leader>pv :Vex<CR> " project view
