@@ -28,6 +28,11 @@ export GOHOME=$HOME/go
 export GOPATH=$HOME/go
 export DOTFILES=$HOME/.dotfiles
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+function cheat {
+  curl https://cht.sh/$1
+}
 
 #git
 alias gs='git status'
@@ -38,11 +43,6 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gd='git branch -d'
 
-alias dev="cd $HOME/Developer"
-alias spell="cat /usr/share/dict/words | grep $1"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-function cheat {
-  curl https://cht.sh/$1
-}
+#alias dev="cd $HOME/Developer"
+alias dev="ls  $HOME/Developer | fzf"
+alias dotfiles="cd $DOTFILES"
