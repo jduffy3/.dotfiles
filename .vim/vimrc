@@ -21,17 +21,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround',
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'dense-analysis/ale'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 colorscheme gruvbox
 
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
-let g:ale_completion_enabled = 1
-let g:ale_completion_autoimport = 1
-let g:ale_fix_on_save = 1
 
 let mapleader = " "
 nnoremap <leader>pv :Vex<CR> " project view
@@ -41,3 +36,9 @@ nnoremap <leader>pf :Files<CR>
 nnoremap <leader><leader> <C-^> " alternate file
 
 xnoremap . :normal .<CR> "visual dot command
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
