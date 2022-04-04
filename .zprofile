@@ -44,5 +44,5 @@ alias gb='git branch'
 alias gd='git branch -d'
 
 alias dotfiles="cd $DOTFILES"
-
+alias vimrc='vim $HOME/.vim/vimrc'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
