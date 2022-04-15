@@ -24,9 +24,13 @@ function entries {
   cat $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
 }
 
+#go
 export GOHOME=$HOME/go
 export GOPATH=$HOME/go
+
+# dotfiles
 export DOTFILES=$HOME/.dotfiles
+
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -46,3 +50,5 @@ alias gd='git branch -d'
 alias dotfiles="cd $DOTFILES"
 alias vimrc='vim $HOME/.vim/vimrc'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(rbenv init - zsh)"
