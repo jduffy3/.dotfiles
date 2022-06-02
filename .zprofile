@@ -50,5 +50,6 @@ alias vimrc='vim $HOME/.vim/vimrc'
 #So far only for mac...
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.gorc ] && source ~/.gorc
+[ -f ~/.javarc ] && source ~/.javarc
 
 eval "$(rbenv init - zsh)"
