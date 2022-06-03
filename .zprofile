@@ -35,6 +35,7 @@ function cheat {
   curl https://cht.sh/$1
 }
 
+alias dev="cd ~/Developer"
 #git
 alias gs='git status'
 alias gac='git commit -am'
