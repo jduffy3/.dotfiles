@@ -10,4 +10,4 @@ if [ ! -h "$JVM_FILE" ]; then
   sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk $JVM_FILE
 fi
 
-#export JAVA_HOME=/opt/homebrew/Cellar/openjdk/18.0.1.1/
+export JAVA_HOME=$(brew --prefix)/Cellar/openjdk@11/11.0.15
