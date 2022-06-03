@@ -4,10 +4,10 @@
 # manually update playbook to determine folder and set env var
 #
 
-JDK_FILE=/Library/Java/JavaVirtualMachines/openjdk-18.jdk
-if [ ! -h "$JDK_FILE" ]; then
+JVM_FILE=/Library/Java/JavaVirtualMachines/openjdk-11.jdk
+if [ ! -h "$JVM_FILE" ]; then
   echo "symlink jdk..."
-  sudo ln -sfn /opt/homebrew/opt/openjdk@18/libexec/openjdk.jdk $JDK_FILE
+  sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk $JVM_FILE
 fi
 
-export JAVA_HOME=/opt/homebrew/Cellar/openjdk/18.0.1.1/
+#export JAVA_HOME=/opt/homebrew/Cellar/openjdk/18.0.1.1/
