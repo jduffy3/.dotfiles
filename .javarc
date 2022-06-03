@@ -1,0 +1,13 @@
+#currently have to set this manually, not bothered as of yet to:
+# run a ansible-galaxy role
+# install jenv
+# manually update playbook to determine folder and set env var
+#
+
+JDK_FILE=/Library/Java/JavaVirtualMachines/openjdk-18.jdk
+if [ ! -h "$JDK_FILE" ]; then
+  echo "symlink jdk..."
+  sudo ln -sfn /opt/homebrew/opt/openjdk@18/libexec/openjdk.jdk $JDK_FILE
+fi
+
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk/18.0.1.1/
