@@ -52,5 +52,6 @@ alias vimrc='vim $HOME/.vim/vimrc'
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.gorc ] && source ~/.gorc
 [ -f ~/.javarc ] && source ~/.javarc
+[ -f ~/.pythonrc ] && source ~/.pythonrc
 
 eval "$(rbenv init - zsh)"
