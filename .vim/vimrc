@@ -1,7 +1,6 @@
 packloadall
 
 syntax on
-set termguicolors     " enable true colors support
 set noswapfile
 set number relativenumber
 set scrolloff=8
