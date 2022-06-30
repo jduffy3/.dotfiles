@@ -12,3 +12,5 @@
   gb = branch
   gd = branch -d
 
+[init]
+	defaultBranch = main
