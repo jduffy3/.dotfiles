@@ -6,6 +6,7 @@ vim.cmd([[colorscheme gruvbox]])
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
+vim.opt.updatetime = 100
 vim.api.nvim_command("set noswapfile")
 
 
