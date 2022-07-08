@@ -1,4 +1,6 @@
 require 'treesitter'
+require 'go'
+
 vim.cmd [[packadd packer.nvim]]
 
 local fn = vim.fn

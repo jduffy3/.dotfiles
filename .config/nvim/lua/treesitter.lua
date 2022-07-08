@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "java", "lua", "kotlin" },
+  ensure_installed = { "java", "lua", "kotlin", "go" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
