@@ -24,6 +24,9 @@ function entries {
   cat $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
 }
 
+alias new-uuid='uuidgen | tr "[:upper:]" "[:lower:]" | tr -d "\n"'
+alias copy-uuid='new-uuid | pbcopy; echo "new uuid in clipboard";'
+
 
 # dotfiles
 export DOTFILES=$HOME/.dotfiles
@@ -47,6 +50,6 @@ alias gd='git branch -d'
 alias dotfiles="cd $DOTFILES"
 alias vimrc='vim $HOME/.vim/vimrc'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.gorc ] && source ~/.gorc
+[ -f ~/.go.zsh ] && source ~/.go.zsh
+[ -f ~/.stash.zsh ] && source ~/.stash.zsh
 
-eval "$(rbenv init - zsh)"
