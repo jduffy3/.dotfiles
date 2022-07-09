@@ -8,6 +8,8 @@ JVM_FILE=/Library/Java/JavaVirtualMachines/openjdk-11.jdk
 if [ ! -h "$JVM_FILE" ]; then
   echo "symlink jdk..."
   sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk $JVM_FILE
+else
+  echo "$JVM_FILE not found!"
 fi
 
 export JAVA_HOME=$(brew --prefix)/Cellar/openjdk@11/11.0.15
