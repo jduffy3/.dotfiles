@@ -24,6 +24,9 @@ function entries {
   cat $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
 }
 
+alias new-uuid='uuidgen | tr "[:upper:]" "[:lower:]" | tr -d "\n"'
+alias copy-uuid='new-uuid | pbcopy; echo "new uuid in clipboard";'
+
 
 # dotfiles
 export DOTFILES=$HOME/.dotfiles
@@ -49,9 +52,9 @@ alias dotfiles="cd $DOTFILES"
 alias vimrc='vim $HOME/.vim/vimrc'
 
 #So far only for mac...
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.gorc ] && source ~/.gorc
 [ -f ~/.javarc ] && source ~/.javarc
 [ -f ~/.pythonrc ] && source ~/.pythonrc
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.go.zsh ] && source ~/.go.zsh
+[ -f ~/.stash.zsh ] && source ~/.stash.zsh
 
-eval "$(rbenv init - zsh)"
