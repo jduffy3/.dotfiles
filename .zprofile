@@ -26,10 +26,8 @@ function entries {
 alias new-uuid='uuidgen | tr "[:upper:]" "[:lower:]" | tr -d "\n"'
 alias copy-uuid='new-uuid | pbcopy; echo "new uuid in clipboard";'
 
-
 # dotfiles
 export DOTFILES=$HOME/.dotfiles
-
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
