@@ -3,11 +3,27 @@ require 'plugins'
 vim.o.background = 'dark'
 vim.cmd([[colorscheme gruvbox]])
 
+vim.opt.splitbelow = true -- shows status below
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 100
 vim.api.nvim_command("set noswapfile")
+
+function my_statusline()
+  local branch = vim.fn.FugitiveHead()
+  --local branch = vim.fn.FugitiveStatusline()
+
+  if branch and #branch > 0 then
+    branch = ' '..branch
+  end
+
+  --from :help fugitive
+  --'%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P'
+  --return '%<%f %h%m%r'..fn.FugitiveStatusline()..'%=%-14.(%1,%c%V%) %P'
+  return branch..' %f%m%=%l:%c'
+end
+vim.cmd[[ set statusline=%!luaeval('my_statusline()') ]]
 
 
 vim.g.mapleader = [[ ]]
