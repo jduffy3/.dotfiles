@@ -50,6 +50,9 @@ alias gd='git branch -d'
 alias dotfiles="cd $DOTFILES"
 alias vimrc='vim $HOME/.vim/vimrc'
 
+alias vim='nvim'
+alias vi='vim'
+
 #So far only for mac...
 [ -f ~/.javarc ] && source ~/.javarc
 [ -f ~/.pythonrc ] && source ~/.pythonrc
