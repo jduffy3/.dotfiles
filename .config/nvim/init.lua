@@ -39,3 +39,8 @@ vim.keymap.set('n', '<leader>pf', ':Files<CR>')
 vim.keymap.set('n', '<leader><leader>', '<C-^>') -- alternate file
 vim.keymap.set('x', '.', ':normal .<CR>') -- visual dot command
 
+vim.keymap.set('n', 'gb', ':Git blame<CR>')
+
+--quickfix nav
+vim.keymap.set('n', '<C-k>', ':cprev<CR>')
+vim.keymap.set('n', '<C-j>', ':cnext<CR>')
