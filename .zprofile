@@ -57,4 +57,5 @@ function entries {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.go.zsh ] && source ~/.go.zsh
 [ -f ~/.stash.zsh ] && source ~/.stash.zsh
+[ -f ~/.ruby.zsh ] && source ~/.ruby.zsh
 
