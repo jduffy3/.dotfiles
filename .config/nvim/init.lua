@@ -3,6 +3,7 @@ require 'plugins'
 vim.o.background = 'dark'
 vim.cmd([[colorscheme gruvbox]])
 
+vim.opt.cursorline = true 
 vim.opt.splitbelow = true -- shows status below
 vim.opt.number = true
 vim.opt.relativenumber = true
