@@ -16,9 +16,6 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2 
 vim.opt.shiftround = true
 
--- set dir view 25%
-vim.g.netrw_winsize = 25
-
 function my_statusline()
   local branch = vim.fn.FugitiveHead()
   --local branch = vim.fn.FugitiveStatusline()
