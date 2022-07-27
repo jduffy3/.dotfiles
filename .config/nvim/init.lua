@@ -38,6 +38,7 @@ vim.keymap.set('n', '<leader>pv', ':Vex<CR>') -- project view
 vim.keymap.set('n', '<C-p>', ':GFiles<CR>')
 vim.keymap.set('n', '<leader>pf', ':Files<CR>')
 vim.keymap.set('n', '<leader><leader>', '<C-^>') -- alternate file
+vim.keymap.set('n', '<C-l>', ':nohlsearch<CR><C-l>') -- clear highlights
 vim.keymap.set('x', '.', ':normal .<CR>') -- visual dot command
 
 vim.keymap.set('n', 'gb', ':Git blame<CR>')
