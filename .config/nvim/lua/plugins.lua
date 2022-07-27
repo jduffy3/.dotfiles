@@ -24,6 +24,7 @@ packer.init({
 
 packer.startup(function(use)
   use { "wbthomason/packer.nvim" }
+  use { "fatih/vim-go" }
   use 'neovim/nvim-lspconfig'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
