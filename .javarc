@@ -12,4 +12,5 @@ else
   echo "$JVM_FILE not found!"
 fi
 
-export JAVA_HOME=$(brew --prefix)/Cellar/openjdk@11/11.0.15
+#export JAVA_HOME=$(brew --prefix)/Cellar/openjdk@11/11.0.15
+export JAVA_HOME=$(/usr/libexec/java_home)
