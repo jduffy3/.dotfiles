@@ -25,6 +25,7 @@ packer.init({
 packer.startup(function(use)
   use { "wbthomason/packer.nvim" }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
