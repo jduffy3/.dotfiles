@@ -1,10 +1,10 @@
 require 'plugins'
 
-vim.o.background = 'dark'
+-- vim.o.background = 'dark'
 vim.cmd([[colorscheme gruvbox]])
 
 vim.opt.cursorline = true 
-vim.opt.splitbelow = true -- shows status below
+vim.opt.splitbelow = true 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
@@ -32,11 +32,11 @@ end
 vim.cmd[[ set statusline=%!luaeval('my_statusline()') ]]
 
 
-vim.g.mapleader = [[ ]]
-vim.keymap.set('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>') 
+vim.g.mapleader = [[ ]] -- space
+vim.keymap.set('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>') -- source init
 vim.keymap.set('n', '<leader>pv', ':Vex<CR>') -- project view
-vim.keymap.set('n', '<C-p>', ':GFiles<CR>')
-vim.keymap.set('n', '<leader>pf', ':Files<CR>')
+vim.keymap.set('n', '<C-p>', ':GFiles<CR>') -- fzf git files
+vim.keymap.set('n', '<leader>pf', ':Files<CR>') -- fzf files
 vim.keymap.set('n', '<leader><leader>', '<C-^>') -- alternate file
 vim.keymap.set('n', '<C-l>', ':nohlsearch<CR><C-l>') -- clear highlights
 vim.keymap.set('x', '.', ':normal .<CR>') -- visual dot command

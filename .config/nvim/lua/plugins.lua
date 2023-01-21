@@ -32,6 +32,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
 
+  use { 'L3MON4D3/LuaSnip', tag = "v<CurrentMajor>.*"}
   use 'saadparwaiz1/cmp_luasnip'
 
   use 'tpope/vim-fugitive'
@@ -40,6 +41,7 @@ packer.startup(function(use)
   use "junegunn/fzf.vim"
   use 'airblade/vim-gitgutter'
 
+  use 'ThePrimeagen/vim-be-good'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -49,5 +51,5 @@ packer.startup(function(use)
 end)
 
 require 'treesitter'
-require 'go'
 require 'completion'
+require 'go'
