@@ -21,7 +21,7 @@ alias gac='git commit -am'
 alias gcm='git commit -m'
 alias gs='git status'
 alias gc='git checkout'
-alias gb='git branch'
+alias gb='git --no-pager branch'
 alias gd='git branch -d'
 
 alias dotfiles="cd $DOTFILES"
@@ -58,4 +58,5 @@ function entries {
 [ -f ~/.go.zsh ] && source ~/.go.zsh
 [ -f ~/.stash.zsh ] && source ~/.stash.zsh
 [ -f ~/.ruby.zsh ] && source ~/.ruby.zsh
+[ -f ~/.flutter.zsh ] && source ~/.flutter.zsh
 

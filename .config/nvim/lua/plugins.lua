@@ -32,7 +32,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
 
-  use { 'L3MON4D3/LuaSnip', tag = "v<CurrentMajor>.*"}
+  use { 'L3MON4D3/LuaSnip', tag = "v1.*"}
   use 'saadparwaiz1/cmp_luasnip'
 
   use 'tpope/vim-fugitive'
@@ -42,6 +42,9 @@ packer.startup(function(use)
   use 'airblade/vim-gitgutter'
 
   use 'ThePrimeagen/vim-be-good'
+
+  use 'mattn/emmet-vim'
+  use 'prettier/vim-prettier'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
