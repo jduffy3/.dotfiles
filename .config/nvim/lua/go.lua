@@ -60,6 +60,6 @@ require'lspconfig'.html.setup{
     flags = lsp_flags,
 }
 
-
+require'lspconfig'.prismals.setup{}
 
 
