@@ -56,7 +56,7 @@ function entries {
 [ -f ~/.pythonrc ] && source ~/.pythonrc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.go.zsh ] && source ~/.go.zsh
-[ -f ~/.stash.zsh ] && source ~/.stash.zsh
 [ -f ~/.ruby.zsh ] && source ~/.ruby.zsh
 [ -f ~/.flutter.zsh ] && source ~/.flutter.zsh
+[ -f ~/.google.zsh ] && source ~/.google.zsh
 
