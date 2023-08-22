@@ -31,7 +31,6 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -282,7 +281,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'kotlin', 'html', 'ruby', 'go', 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'javascript', 'kotlin', 'html', 'ruby', 'go', 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -353,12 +352,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
-  -- NOTE: Remember that lua is a real programming language, and as such it is possible
-  -- to define small helper and utility functions so you don't have to repeat yourself
-  -- many times.
-  --
-  -- In this case, we create a function that lets us more easily define mappings specific
-  -- for LSP related items. It sets the mode, buffer and description for us each time.
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
@@ -407,6 +400,7 @@ end
 local servers = {
   gopls = {},
   tsserver = {},
+  solargraph = {},
 
   lua_ls = {
     Lua = {
@@ -490,17 +484,21 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-vim.keymap.set('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>') -- source init
 vim.keymap.set('n', '<leader>pv', ':Vex<CR>') -- project view
-vim.keymap.set('n', '<C-p>', ':Telescope find_files') -- fzf git files
-vim.keymap.set('n', '<leader>pf', ':Telescope find_files') -- fzf files
+vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>') -- fzf git files
+vim.keymap.set('n', '<leader>pf', ':Telescope find_files<CR>') -- fzf (project) files
+vim.keymap.set('n', '<leader>ps', ':Telescope live_grep<CR>') -- fzf (project search) file contents
 vim.keymap.set('n', '<leader><leader>', '<C-^>') -- alternate file
 vim.keymap.set('n', '<C-l>', ':nohlsearch<CR><C-l>') -- clear highlights
 vim.keymap.set('x', '.', ':normal .<CR>') -- visual dot command
 
 vim.keymap.set('n', 'gb', ':Git blame<CR>')
 
-
 --quickfix nav
 vim.keymap.set('n', '<C-k>', ':cprev<CR>')
 vim.keymap.set('n', '<C-j>', ':cnext<CR>')
+
+-- rails
+vim.keymap.set('n', '<leader>rt', ':!rails test %:s?app?test?<CR>') -- run test file
+vim.keymap.set('n', '<leader>tt', ':!sleep 1 && rails test <CR>') -- run test file
+vim.keymap.set('n', '<leader>tf', ':e %:r:s?app?test?_test.rb<CR>') -- open test file
