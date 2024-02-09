@@ -46,7 +46,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+      { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -70,7 +70,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',          opts = {} },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -84,7 +84,8 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
       on_attach = function(bufnr)
-        vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
+        vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk,
+          { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
         vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
         vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
       end,
@@ -126,7 +127,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',         opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -383,7 +384,7 @@ local on_attach = function(_, bufnr)
   end, '[W]orkspace [L]ist Folders')
 
   nmap('<leader>f', function()
-      vim.lsp.buf.format { async = true }
+    vim.lsp.buf.format { async = true }
   end, 'Format file')
 
   -- Create a command `:Format` local to the LSP buffer
@@ -484,21 +485,15 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-vim.keymap.set('n', '<leader>pv', ':Vex<CR>') -- project view
-vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>') -- fzf git files
-vim.keymap.set('n', '<leader>pf', ':Telescope find_files<CR>') -- fzf (project) files
-vim.keymap.set('n', '<leader>ps', ':Telescope live_grep<CR>') -- fzf (project search) file contents
-vim.keymap.set('n', '<leader><leader>', '<C-^>') -- alternate file
-vim.keymap.set('n', '<C-l>', ':nohlsearch<CR><C-l>') -- clear highlights
-vim.keymap.set('x', '.', ':normal .<CR>') -- visual dot command
+vim.keymap.set('n', '<leader>pv', ':30Vex<CR>', { desc = '[P]roject [V]iew' }) -- project view
+vim.keymap.set('n', '<C-p>', ':Telescope find_files<CR>')                      -- fzf git files
+vim.keymap.set('n', '<leader>pf', ':Telescope find_files<CR>')                 -- fzf (project) files
+vim.keymap.set('n', '<leader><leader>', '<C-^>', { desc = 'Alternate file' })
+vim.keymap.set('n', '<C-l>', ':nohlsearch<CR><C-l>')                           -- clear highlights
+vim.keymap.set('x', '.', ':normal .<CR>')                                      -- visual dot command
 
 vim.keymap.set('n', 'gb', ':Git blame<CR>')
 
---quickfix nav
-vim.keymap.set('n', '<C-k>', ':cprev<CR>')
-vim.keymap.set('n', '<C-j>', ':cnext<CR>')
-
 -- rails
-vim.keymap.set('n', '<leader>rt', ':!rails test %:s?app?test?<CR>') -- run test file
-vim.keymap.set('n', '<leader>tt', ':!sleep 1 && rails test <CR>') -- run test file
-vim.keymap.set('n', '<leader>tf', ':e %:r:s?app?test?_test.rb<CR>') -- open test file
+vim.keymap.set('n', '<leader>rt', ':!rails test %:s?app?test?<CR>', { desc = '[R]un [T]estfil' }) -- run test file
+vim.keymap.set('n', '<leader>tf', ':e %:r:s?app?test?_test.rb<CR>', { desc = '[T]est [F]ile' })   -- open test file

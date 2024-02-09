@@ -41,7 +41,25 @@ function diary {
   touch $ENTRY
 
   TIME=$(date +%T)
-  echo $TIME >> $ENTRY && vim "+ normal G $" $ENTRY
+  #echo $TIME >> $ENTRY && vim "+ normal G $" $ENTRY
+  echo $TIME >> $ENTRY
+  vim "+ normal G $" $ENTRY
+}
+
+function journal {
+  YEAR=`date +%Y`
+  NUM_AND_MONTH=`date +"%m-%b"`
+  mkdir -p "$HOME/Documents/.journal/$YEAR/$NUM_AND_MONTH"
+
+  NUM_AND_DAY=`date +"%d-%a"`
+  ENTRY="$HOME/Documents/.journal/$YEAR/$NUM_AND_MONTH/.$NUM_AND_DAY.txt"
+
+  touch $ENTRY
+
+  TIME=$(date +%T)
+  #echo $TIME >> $ENTRY && vim "+ normal G $" $ENTRY
+  echo $TIME >> $ENTRY
+  vim "+ normal G $" $ENTRY
 }
 
 function entries {
