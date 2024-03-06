@@ -11,6 +11,14 @@
   gc = checkout
   gb = branch
   gd = branch -d
+	fpush = push
 
 [init]
 	defaultBranch = main
+	templatedir = ~/.git_template
+[core]
+	excludesfile = /Users/james/.gitignore
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
