@@ -1,5 +1,4 @@
 -- Set <space> as the leader key
--- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -673,9 +672,3 @@ vim.keymap.set("x", ".", ":normal .<CR>") -- visual dot command
 vim.keymap.set("n", "gb", ":Git blame<CR>")
 vim.keymap.set("n", "gh", ":0Gclog <CR>", { desc = "[G]it [H]istory" })
 vim.keymap.set("n", "<leader><CR>", "source ~/.dotfiles/.config/nvim.init.lua", { desc = "Source nvim config" })
-
--- [[ Ruby on Rails keymaps ]]
--- messes up files names that have app in them
--- vim.keymap.set('n', '<leader>rt', ':!rails test %:s?app?test?<CR>', { desc = '[R]un [T]estfile' }) -- run test file
-vim.keymap.set("n", "<leader>rt", ":!rails test %<CR>", { desc = "[R]un [T]estfile" }) -- run test file
-vim.keymap.set("n", "<leader>tf", ":e %:r:s?app?test?_test.rb<CR>", { desc = "[T]est [F]ile" }) -- open test file
