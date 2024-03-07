@@ -375,7 +375,6 @@ require("lazy").setup({
 		build = ":TSUpdate",
 		config = function()
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = { "bash", "ruby", "go", "html", "lua", "markdown", "vim", "vimdoc" },
