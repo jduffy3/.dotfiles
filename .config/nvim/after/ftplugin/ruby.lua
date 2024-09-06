@@ -14,6 +14,12 @@ vim.keymap.set("n", "<leader>nt", function()
 end, { desc = "[N]ext [T]est" })
 
 vim.keymap.set("n", "<leader>tf", ":e %:r:s?app?test?_test.rb<CR>", { desc = "Open [T]est [F]ile" })
+vim.keymap.set(
+	"n",
+	"<leader>stf",
+	":vsplit %:r:s?app?test?_test.rb<CR>",
+	{ desc = "Open Vertical [S]plit [T]est [F]ile" }
+)
 
 -- run test from main file or test file
 vim.keymap.set("n", "<leader>rt", function()

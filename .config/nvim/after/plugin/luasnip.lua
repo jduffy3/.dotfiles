@@ -5,6 +5,8 @@ vim.keymap.set(
 	{ desc = "[S]ource luasnips" }
 )
 
+require("luasnip.session.snippet_collection").clear_snippets()
+
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
@@ -20,9 +22,9 @@ ls.add_snippets("lua", {
 		t({ " = function(" }),
 		i(2),
 		t({ ")" }),
-		t({ "", "  " }),
 		i(0),
 		t({ "", "end" }),
+		t({ "" }),
 	}),
 })
 

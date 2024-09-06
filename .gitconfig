@@ -7,9 +7,11 @@
 [alias]
   gac = commit -am
   gcm = commit -m
-  gs = status
-  gc = checkout
   gb = branch
+  gc = checkout
+  gl = log
+  gp = pull
+  gs = status
   gd = branch -d
 	fpush = push
 
@@ -22,3 +24,10 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[push]
+  autoSetupRemote = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

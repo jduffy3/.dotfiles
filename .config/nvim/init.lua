@@ -240,6 +240,7 @@ require("lazy").setup({
 			-- Snippet Engine & its associated nvim-cmp source
 			{
 				"L3MON4D3/LuaSnip",
+				version = "v2.*",
 				build = (function()
 					-- Build Step is needed for regex support in snippets
 					-- This step is not supported in many windows environments
@@ -449,12 +450,10 @@ require("lazy").setup({
 	{
 		-- Add indentation guides even on blank lines
 		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
 		-- Enable `lukas-reineke/indent-blankline.nvim`
 		-- See `:help indent_blankline.txt`
-		opts = {
-			char = "┊",
-			show_trailing_blankline_indent = false,
-		},
+		opts = {},
 	},
 
 	{ -- Autoformat
@@ -665,9 +664,8 @@ vim.keymap.set("n", "[Q", ":cfirst<CR>", { desc = "[Q]uickfix :c[f]irst" })
 vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "[Q]uickfix :c[p]rev" })
 vim.keymap.set("n", "<leader>pv", ":30Vex<CR>", { desc = "[P]roject [V]iew" }) -- project view
 vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>") -- fzf git files
-vim.keymap.set("n", "<leader>pf", ":Telescope find_files<CR>") -- fzf (project) files
 vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Alternate file" })
 vim.keymap.set("x", ".", ":normal .<CR>") -- visual dot command
 vim.keymap.set("n", "gb", ":Git blame<CR>")
 vim.keymap.set("n", "gh", ":0Gclog <CR>", { desc = "[G]it [H]istory" })
-vim.keymap.set("n", "<leader><CR>", "source ~/.dotfiles/.config/nvim.init.lua", { desc = "Source nvim config" })
+vim.keymap.set("n", "<leader>gb", ":GBrowse master:%<CR>", { desc = "[G]it [B]rowse" })
