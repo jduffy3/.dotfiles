@@ -66,7 +66,7 @@ function entries {
   YEAR=`date +%Y`
   NUM_AND_MONTH=`date +"%m-%b"`
 
-  cat $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
+  tail -n +1 $HOME/Documents/devdiary/$YEAR/$NUM_AND_MONTH/*
 }
 
 #So far only for mac...

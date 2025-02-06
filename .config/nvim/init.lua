@@ -16,10 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 --  To check the current status run :Lazy
 --  You can configure plugins using the `config` key.
 require("lazy").setup({
-	-- Git related plugins
+	"github/copilot.vim",
 	"tpope/vim-fugitive",
 	"tpope/vim-rhubarb",
-
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -174,7 +173,7 @@ require("lazy").setup({
 			local servers = {
 				gopls = {},
 				solargraph = {},
-				tsserver = {},
+				ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes { ...},

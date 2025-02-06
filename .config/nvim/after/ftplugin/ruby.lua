@@ -31,3 +31,10 @@ vim.keymap.set("n", "<leader>rt", function()
 		vim.api.nvim_command(":! rails test " .. test_file_name)
 	end
 end, { desc = "[R]un [T]estfile" })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.rb",
+	callback = function()
+		vim.cmd([[%s/\s\+$//e]])
+	end,
+})

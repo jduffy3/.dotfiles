@@ -1,2 +1,2 @@
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
