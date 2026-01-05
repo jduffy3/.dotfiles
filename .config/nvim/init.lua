@@ -661,7 +661,7 @@ vim.keymap.set("n", "]Q", ":clast<CR>", { desc = "[Q]uickfix :c[l]ast" })
 vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "[Q]uickfix :c[n]ext" })
 vim.keymap.set("n", "[Q", ":cfirst<CR>", { desc = "[Q]uickfix :c[f]irst" })
 vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "[Q]uickfix :c[p]rev" })
-vim.keymap.set("n", "<leader>pv", ":30Vex<CR>", { desc = "[P]roject [V]iew" }) -- project view
+vim.keymap.set("n", "<leader>pv", ":30Vex!<CR>", { desc = "[P]roject [V]iew" }) -- project view
 vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>") -- fzf git files
 vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Alternate file" })
 vim.keymap.set("x", ".", ":normal .<CR>") -- visual dot command
