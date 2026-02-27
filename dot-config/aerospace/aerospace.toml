@@ -133,8 +133,6 @@ on-mode-changed = []
     ctrl-5 = 'workspace 5'
     ctrl-6 = 'workspace 6'
     ctrl-7 = 'workspace 7'
-    ctrl-8 = 'workspace 8'
-    ctrl-9 = 'workspace 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -144,8 +142,6 @@ on-mode-changed = []
     ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
     ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
     ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-    ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-    ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 
     [workspace-to-monitor-force-assignment]
 
